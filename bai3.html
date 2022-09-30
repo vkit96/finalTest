@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>bai3</title>
+</head>
+<body>
+<script>
+  let str1 = "abcd";
+  let str2 = "abcdefghiklmf";
+  function checkInclude(string1,string2){
+    let check = false;
+    let leng1 = string1.length;
+    let leng2 = string2.length;
+    for (let i = 0; i < leng2 - leng1 + 1; i++){
+      let string2slice = string2.slice(i,i + leng1);
+        if (string1 == string2slice) {
+          check = true;
+          break;
+        }
+    }
+    return check;
+  }
+  console.log(checkInclude(str1,str2));
+</script>
+</body>
+</html>
